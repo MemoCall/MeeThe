@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=2632, initial-scale=1.0">
+  <title>Clone Pixel Perfect - Group 40</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-white min-h-screen flex flex-col items-center justify-start">
+  <!-- Header minimaliste -->
+  <header class="w-full flex items-center justify-between px-8 py-4 border-b border-gray-200 fixed top-0 left-0 z-20">
+    <div class="text-2xl font-bold text-blue-600">TheMee</div>
+    <div>
+      <select id="langSelect" class="border rounded px-2 py-1 focus:outline-none">
+        <option value="fr">Français</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+  </header>
+  <div class="h-20"></div>
+  <!-- Hero Section avec ellipses en background -->
+  <section class="hero-section">
+    <div class="absolute inset-0 w-full h-full pointer-events-none select-none">
+      <div class="ellipse ellipse12"></div>
+      <div class="ellipse ellipse13"></div>
+    </div>
+    <div class="relative z-10 w-full flex flex-col items-center justify-center mb-8">
+      <h1 id="mainTitle" class="text-5xl font-extrabold text-center leading-tight mb-4">
+        Simplifier la gestion<br>
+        <span class="text-blue-500">de vos appels</span>
+      </h1>
+      <p id="mainDesc" class="text-lg text-gray-700 text-center max-w-2xl mb-6">
+        Gérer vos appels sans frictions grâce à notre système d'historisation des appels performants.
+      </p>
+      <button id="ctaBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow transition">
+        Reprendre le pouvoir sur mes appels
+      </button>
+    </div>
+    <div class="flex w-full justify-center gap-8 mt-12 z-10">
+      <div class="mobile-phone rotate-10">
+        <div class="brove"><span class="speaker"></span></div>
+        <div class="screen">
+          <img src="./phonex.png"" alt="Mockup 1" class="w-full h-full object-cover rounded-2xl" />
+        </div>
+      </div>
+      <div class="mobile-phone rotate-0 border-4 border-blue-600">
+        <div class="brove"><span class="speaker"></span></div>
+        <div class="screen">
+          <img src="./phonex.png" alt="Mockup 2" class="w-full h-full object-cover rounded-2xl" />
+        </div>
+      </div>
+      <div class="mobile-phone -rotate-10">
+        <div class="brove"><span class="speaker"></span></div>
+        <div class="screen">
+          <img src="./phonex.png"" alt="Mockup 3" class="w-full h-full object-cover rounded-2xl" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section Group 41 -->
+  <section class="w-full flex flex-col items-center justify-center py-16 px-2 bg-gradient-to-b from-gray-900 via-indigo-950 to-gray-900">
+    <h2 class="text-3xl md:text-5xl font-bold text-center text-white mb-12 max-w-3xl">All-in-One Contact Management Solution with Memocall</h2>
+    <div class="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      <!-- Bloc gauche -->
+      <div class="relative rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-black via-indigo-900 to-black border border-gray-700 backdrop-blur-md p-8 flex flex-col justify-between min-h-[400px]">
+        <h3 class="text-2xl font-semibold text-white mb-4">Know who call you and essential info in</h3>
+        <img src="https://via.placeholder.com/700x340" alt="Bloc gauche" class="rounded-xl w-full object-cover mt-4" />
+      </div>
+      <!-- Bloc droit -->
+      <div class="relative rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-black via-indigo-900 to-black border border-gray-700 backdrop-blur-md p-8 flex flex-col justify-between min-h-[400px]">
+        <h3 class="text-2xl font-semibold text-white mb-4">One-Click Export of Customized Data Views</h3>
+        <img src="https://via.placeholder.com/700x340" alt="Bloc droit" class="rounded-xl w-full object-cover mt-4" />
+      </div>
+    </div>
+    <!-- Bandeau bas -->
+    <div class="w-full max-w-7xl rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-black via-indigo-900 to-black border border-gray-700 backdrop-blur-md p-8 flex flex-col md:flex-row items-center gap-8">
+      <div class="flex-1">
+        <h3 class="text-2xl font-semibold text-white mb-4">Call History and Notes for Seamless Management</h3>
+      </div>
+      <img src="https://via.placeholder.com/1100x400" alt="Bandeau bas" class="rounded-xl w-full md:w-[600px] object-cover" />
+    </div>
+  </section>
+  <!-- Section Tarifs -->
+  <section class="w-full bg-gray-50 py-20 flex flex-col items-center justify-center">
+    <h2 class="text-4xl font-bold text-center mb-2">Tarifs</h2>
+    <p class="text-lg text-gray-600 text-center mb-12">Choisissez le plan qui vous convient</p>
+    <div class="w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Carte Free -->
+      <div class="bg-white rounded-2xl shadow p-8 flex flex-col items-center border border-gray-200">
+        <h3 class="text-2xl font-bold mb-1">Free</h3>
+        <p class="text-gray-500 mb-4">Testez l'application</p>
+        <div class="text-4xl font-extrabold mb-1">0<span class="text-2xl align-top">€</span><span class="text-base font-normal text-gray-500">/mois</span></div>
+        <ul class="text-gray-700 text-left space-y-2 my-6 w-full">
+          <li class="flex items-center gap-2"><span class="text-green-500 text-xl">✔</span> Fonctionnalités de base</li>
+          <li class="flex items-center gap-2"><span class="text-green-500 text-xl">✔</span> Limité à 50 contacts</li>
+          <li class="flex items-center gap-2"><span class="text-green-500 text-xl">✔</span> Support communautaire</li>
+        </ul>
+        <button class="mt-auto w-full py-3 rounded-lg border border-gray-300 text-gray-800 font-semibold hover:bg-gray-100 transition">Commencer gratuitement</button>
+      </div>
+      <!-- Carte Essential -->
+      <div class="bg-white rounded-2xl shadow p-8 flex flex-col items-center border-2 border-blue-600 relative scale-105 z-10">
+        <span class="absolute -top-5 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs font-bold px-4 py-1 rounded-full shadow">Populaire</span>
+        <h3 class="text-2xl font-bold mb-1">Essential</h3>
+        <p class="text-gray-500 mb-4">Toutes les fonctionnalités</p>
+        <div class="text-4xl font-extrabold mb-1">1,5<span class="text-2xl align-top">€</span><span class="text-base font-normal text-gray-500">/mois</span></div>
+        <ul class="text-gray-700 text-left space-y-2 my-6 w-full">
+          <li class="flex items-center gap-2"><span class="text-green-500 text-xl">✔</span> Toutes les fonctionnalités</li>
+          <li class="flex items-center gap-2"><span class="text-green-500 text-xl">✔</span> Contacts illimités</li>
+          <li class="flex items-center gap-2"><span class="text-green-500 text-xl">✔</span> Support prioritaire</li>
+          <li class="flex items-center gap-2"><span class="text-green-500 text-xl">✔</span> Exportation de données</li>
+        </ul>
+        <button class="mt-auto w-full py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition">Choisir Essential</button>
+      </div>
+      <!-- Carte Business -->
+      <div class="bg-white rounded-2xl shadow p-8 flex flex-col items-center border border-gray-200">
+        <h3 class="text-2xl font-bold mb-1">Business</h3>
+        <p class="text-gray-500 mb-4">Pour des besoins spécifiques</p>
+        <div class="text-4xl font-extrabold mb-1">Sur mesure</div>
+        <ul class="text-gray-700 text-left space-y-2 my-6 w-full">
+          <li class="flex items-center gap-2"><span class="text-green-500 text-xl">✔</span> Toutes les fonctionnalités Essential</li>
+          <li class="flex items-center gap-2"><span class="text-green-500 text-xl">✔</span> Intégrations personnalisées</li>
+          <li class="flex items-center gap-2"><span class="text-green-500 text-xl">✔</span> Support dédié</li>
+          <li class="flex items-center gap-2"><span class="text-green-500 text-xl">✔</span> Formation incluse</li>
+        </ul>
+        <button class="mt-auto w-full py-3 rounded-lg border border-gray-300 text-gray-800 font-semibold hover:bg-gray-100 transition">Nous contacter</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Tally Form -->
+  <section class="w-full bg-gray-50 py-20 flex flex-col items-center justify-center">
+        <div class="w-full max-w-2xl flex flex-col items-center justify-center">
+        <iframe data-tally-src="https://tally.so/embed/wdGxGy?alignLeft=1&dynamicHeight=1&formEventsForwarding=1" loading="lazy" width="100%" height="272" frameborder="0" marginheight="0" marginwidth="0" title="Join the waitlist"></iframe>
+        <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+     
+    </div>
+  </section>
+  <!-- Fin Section Tally Form -->
+
+  
+  <!-- Fin Section Tarifs -->
+  <!-- Fin Section Group 41 -->
+  <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+/* Hero section overflow hidden pour cliper les ellipses */
+
+/* Header glassmorphism */
+header {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border-bottom: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 2px 16px 0 rgba(44,62,80,0.08);
+    z-index: 30;
+  }
+  /* Fin header glassmorphism */
+  
+.hero-section {
+  position: relative;
+  width: 100vw;
+  min-height: 500px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+}
+.ellipse {
+  position: absolute;
+  width: 400px;
+  height: 800px;
+  border-radius: 50%;
+  filter: blur(80px) brightness(1.1);
+  opacity: 0.5;
+  z-index: 1;
+  pointer-events: none;
+}
+.ellipse12 {
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(120deg, rgba(19,89,202,0.7) 0%, rgba(88,151,255,0.5) 61%, rgba(19,89,202,0.3) 100%);
+}
+.ellipse13 {
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%) scaleX(-1) rotate(8deg);
+  background: linear-gradient(120deg, rgba(19,89,202,0.7) 0%, rgba(88,151,255,0.5) 61%, rgba(19,89,202,0.3) 100%);
+}
+@media (max-width: 1024px) {
+  .ellipse {
+    width: 220px;
+    height: 400px;
+  }
+}
+/* Fin demi-ellipses hero */
+
+/* Mockup téléphone hero */
+.mobile-phone {
+  position: relative;
+  background: #fff;
+  margin: 0;
+  padding: 10px 10px 30px;
+  width: 320px;
+  height: 540px;
+  box-shadow: 0 8px 32px 0 rgba(44,62,80,0.18), 0 1.5px 8px 0 rgba(44,62,80,0.10);
+  border-radius: 32px;
+  border: 6px solid #0d1626;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s;
+  background-clip: padding-box;
+}
+.mobile-phone.border-4 {
+  border-width: 8px;
+}
+.screen {
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px 0 rgba(44,62,80,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brove {
+  width: 120px;
+  height: 18px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+  border-radius: 0 0 16px 16px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.speaker {
+  width: 48px;
+  height: 5px;
+  background: #d2d2d2;
+  display: block;
+  margin: 0 auto;
+  margin-top: 5px;
+  border-radius: 20px;
+}
+@media (max-width: 1100px) {
+  .mobile-phone {
+    width: 220px;
+    height: 380px;
+    border-radius: 20px;
+    padding: 6px 6px 18px;
+  }
+  .screen {
+    border-radius: 14px;
+  }
+  .brove {
+    width: 70px;
+    height: 10px;
+    border-radius: 0 0 8px 8px;
+  }
+  .speaker {
+    width: 28px;
+    height: 3px;
+    border-radius: 8px;
+  }
+}
+/* Fin mockup téléphone hero */
+
+/* Rotations personnalisées pour les mockups téléphone */
+.rotate-10 {
+  transform: rotate(10deg) !important;
+  margin-right: 2rem;
+}
+.-rotate-10 {
+  transform: rotate(-10deg) !important;
+  margin-left: 2rem;
+}
+/* Fin rotations personnalisées */
+
+/* Responsive : masquer les mockups téléphone sous 900px */
+@media (max-width: 900px) {
+  .mobile-phone {
+    display: none !important;
+  }
+  .flex.w-full.justify-center.gap-8.mt-12.z-10 {
+    display: none !important;
+  }
+}
+
+/* Hero section responsive */
+@media (max-width: 900px) {
+  .hero-section {
+    flex-direction: column;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    min-height: 350px;
+  }
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  .hero-section p {
+    font-size: 1rem;
+  }
+}
+
+/* Section 41 responsive */
+@media (max-width: 900px) {
+  section.bg-gradient-to-b .grid,
+  section.bg-gradient-to-b .flex-row {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+  }
+  section.bg-gradient-to-b .rounded-2xl {
+    min-width: 0;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* Section tarifs responsive */
+@media (max-width: 900px) {
+  section.bg-gray-50 .grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+  }
+  section.bg-gray-50 .rounded-2xl {
+    min-width: 0;
+    width: 100%;
+    margin: 0 auto;
+  }
+  section.bg-gray-50 h2 {
+    font-size: 2rem;
+  }
+  section.bg-gray-50 p {
+    font-size: 1rem;
+  }
+}
+
