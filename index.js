@@ -4,34 +4,52 @@ const translations = {
     title: 'Simplify call management<br><span class="text-blue-500">of your calls</span>',
     desc: "Manage your calls seamlessly thanks to our efficient call history system.",
     cta: "Take back control of my calls",
+    // Professions
+    professions_title: "Begin your success story",
+    professions_tagline: "Whatever your profession, Memocall simplifies call management.",
+    professions_cards: [
+      { title: "Liberal professions", desc: "Free yourself from call management" },
+      { title: "Freelancers", desc: "Manage your clients, not your calls." },
+      { title: "Salespeople", desc: "Focus on your sales, not your calls" },
+      { title: "Entrepreneurs", desc: "Centralize your calls, boost your network." },
+      { title: "Real estate agents", desc: "Track your prospects and close more deals." },
+      { title: "SMEs", desc: "Optimize communication with your clients." },
+      { title: "Event planners", desc: "Coordinate providers and clients effortlessly" }
+    ],
     // Pricing
     pricing_title: "Pricing",
     pricing_sub: "Choose the plan that suits you",
     free: "Free",
     free_desc: "Try the app",
-    free_price: "0€",
+    free_price: "0",
     free_features: [
+      "Test all features for 30 days",
       "Basic features",
-      "Limited to 50 contacts",
       "Community support"
     ],
     free_btn: "Start for free",
     essential: "Essential",
-    essential_desc: "All features",
-    essential_price: "1.5€",
+    essential_desc: "All the essentials for your business",
+    essential_price: "1",
     essential_features: [
-      "All features",
-      "Unlimited contacts",
-      "Priority support",
-      "Data export"
+      "Contact management",
+      "Call management",
+      "Lock screen notifications",
+      "Smart import",
+      "Call history & notes",
+      "Export data",
+      "Priority support"
     ],
     essential_btn: "Choose Essential",
     popular: "Popular",
     business: "Business",
-    business_desc: "For specific needs",
+    business_desc: "For advanced needs",
     business_price: "Custom",
     business_features: [
       "All Essential features",
+      "Attach images or PDFs to notes",
+      "Mini-CRM",
+      "Smart Use consulting",
       "Custom integrations",
       "Dedicated support",
       "Training included"
@@ -48,34 +66,52 @@ const translations = {
     title: 'Simplifier la gestion<br><span class="text-blue-500">de vos appels</span>',
     desc: "Gérer vos appels sans frictions grâce à notre système d'historisation des appels performants.",
     cta: "Reprendre le pouvoir sur mes appels",
+    // Professions
+    professions_title: "Commencez à construire votre succès",
+    professions_tagline: "Quel que soit votre métier, Memocall simplifie la gestion de vos appels.",
+    professions_cards: [
+      { title: "Professions libérales", desc: "Libérez-vous de la gestion des appels" },
+      { title: "Libéraux", desc: "Gérez vos clients, pas vos appels." },
+      { title: "Commerciaux", desc: "Focus sur vos ventes, pas sur vos appels" },
+      { title: "Entrepreneurs", desc: "Centralisez vos appels, boostez votre réseau." },
+      { title: "Agents immobiliers", desc: "Suivez vos prospects et concluez plus de ventes." },
+      { title: "PME", desc: "Optimisez la communication avec vos clients." },
+      { title: "Événementiels", desc: "Coordonnez vos prestataires et clients sans effort" }
+    ],
     // Pricing
     pricing_title: "Tarifs",
     pricing_sub: "Choisissez le plan qui vous convient",
-    free: "Free",
+    free: "Gratuit",
     free_desc: "Testez l'application",
-    free_price: "0€",
+    free_price: "0",
     free_features: [
+      "Testez toutes les fonctionnalités pendant 30 jours",
       "Fonctionnalités de base",
-      "Limité à 50 contacts",
       "Support communautaire"
     ],
     free_btn: "Commencer gratuitement",
-    essential: "Essential",
-    essential_desc: "Toutes les fonctionnalités",
-    essential_price: "1,5€",
+    essential: "Essentiel",
+    essential_desc: "Toutes les fonctionnalités essentielles pour votre activité",
+    essential_price: "1",
     essential_features: [
-      "Toutes les fonctionnalités",
-      "Contacts illimités",
-      "Support prioritaire",
-      "Exportation de données"
+      "Gestion des contacts",
+      "Gestion des appels",
+      "Notifications sur l'écran de verrouillage",
+      "Importation intelligente",
+      "Historique d'appels & notes",
+      "Exportation de données",
+      "Support prioritaire"
     ],
-    essential_btn: "Choisir Essential",
+    essential_btn: "Choisir Essentiel",
     popular: "Populaire",
     business: "Business",
-    business_desc: "Pour des besoins spécifiques",
+    business_desc: "Pour des besoins avancés",
     business_price: "Sur mesure",
     business_features: [
-      "Toutes les fonctionnalités Essential",
+      "Toutes les fonctionnalités Essentiel",
+      "Intégration d'images ou de PDF dans les notes",
+      "Mini-CRM",
+      "Consulting Smart Use",
       "Intégrations personnalisées",
       "Support dédié",
       "Formation incluse"
@@ -94,6 +130,19 @@ function setLang(lang) {
   document.getElementById('mainTitle').innerHTML = translations[lang].title;
   document.getElementById('mainDesc').textContent = translations[lang].desc;
   document.getElementById('ctaBtn').textContent = translations[lang].cta;
+  // Professions
+  const prof = document.querySelector('section.bg-white');
+  if (prof) {
+    prof.querySelector('h2').textContent = translations[lang].professions_title;
+    prof.querySelector('p').textContent = translations[lang].professions_tagline;
+    const cards = prof.querySelectorAll('.grid > div');
+    translations[lang].professions_cards.forEach((card, i) => {
+      if(cards[i]) {
+        cards[i].querySelector('h3').textContent = card.title;
+        cards[i].querySelector('p').textContent = card.desc;
+      }
+    });
+  }
   // Section 41
   const s41 = document.querySelector('section.bg-gradient-to-b');
   if (s41) {
